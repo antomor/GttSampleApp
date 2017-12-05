@@ -5,7 +5,8 @@ A [Sails](http://sailsjs.org) application which provides backend services used b
 This application has been generated using `sails new gttSampleAppBackend` .
 
 ## Application start
-`sails lift`
+1. `npm install`
+2. `sails lift`
 
 The application can be started with an initial set of data by changing the variable dbInit in `config/bootstrap.js` file.
 
