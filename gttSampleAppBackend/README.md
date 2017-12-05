@@ -10,6 +10,8 @@ This application has been generated using `sails new gttSampleAppBackend` .
 
 The application can be started with an initial set of data by changing the variable dbInit in `config/bootstrap.js` file.
 
+**The backend part use SQLite as database and the file is located under the `data` folder**
+
 ## Notes
 In order to let the services be callable by frontend app, cors has been enabled with any restriction on the origins.
 
