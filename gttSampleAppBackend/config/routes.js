@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,10 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  'get /api/stops': 'StopsController.all',
+  'get /api/stops/:id/departures': 'DeparturesController.byStop',
 
+  // authentication API
+  'post /api/auth/login': 'AuthController.login',
+  'post /api/auth/register': 'AuthController.register',
 };
