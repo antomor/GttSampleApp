@@ -38,7 +38,8 @@ export default {
 
   methods: {
     getStopDepartures: function () {
-      var url = 'http://localhost:1337/api/stops/' + this.id + '/departures'
+      var baseAddress = process.env.api.serverHost + ':' + process.env.api.serverPort
+      var url = baseAddress + '/api/stops/' + this.id + '/departures'
       // console.log(url)
       this.$http.get(url).then(
         response => {

@@ -11,6 +11,9 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+const serverHost = process.env.SERVER_HOST || config.dev.serverHost
+const serverPort = process.env.SERVER_PORT || config.dev.serverPort
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
@@ -67,7 +70,7 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port} --> ${serverHost}:${serverPort}`],
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()

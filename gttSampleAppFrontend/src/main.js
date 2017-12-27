@@ -49,6 +49,8 @@ Vue.http.interceptors.push((request, next) => {
   })
 })
 
+console.log(process.env)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

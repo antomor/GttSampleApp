@@ -57,7 +57,8 @@ const StopsList = {
 
   methods: {
     getStops: function () {
-      const stopsUrl = 'http://localhost:1337/api/stops/?page=' + this.currentPage + '&pageSize=' + this.pageSize
+      var baseAddress = process.env.api.serverHost + ':' + process.env.api.serverPort
+      const stopsUrl = baseAddress + '/api/stops/?page=' + this.currentPage + '&pageSize=' + this.pageSize
       this.$http.get(stopsUrl).then(
         response => {
           // get body data

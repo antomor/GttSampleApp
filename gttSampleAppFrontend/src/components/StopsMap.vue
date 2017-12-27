@@ -84,8 +84,9 @@ const StopsMap = {
     getStops: function () {
       // Call resizePreserveCenter() on all maps
       Vue.$gmapDefaultResizeBus.$emit('resize')
+      var baseAddress = process.env.api.serverHost + ':' + process.env.api.serverPort
       const stopsUrl =
-        'http://localhost:1337/api/stops/?page=' +
+        baseAddress + '/api/stops/?page=' +
         this.currentPage +
         '&pageSize=' +
         this.pageSize

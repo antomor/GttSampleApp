@@ -44,7 +44,8 @@ export default {
 
   methods: {
     login () {
-      var url = 'http://localhost:1337/api/auth/login/'
+      var baseAddress = process.env.api.serverHost + ':' + process.env.api.serverPort
+      var url = baseAddress + '/api/auth/login/'
       // console.log(url)
       this.$http.post(url, {
         name: this.name,
