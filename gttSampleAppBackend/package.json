@@ -22,10 +22,7 @@
     "include-all": "^1.0.0",
     "jsonwebtoken": "^8.1.0",
     "rc": "1.0.1",
-    "request-promise": "^4.2.2",
-    "sails": "~0.12.14",
-    "sails-disk": "~0.10.9",
-    "waterline-sqlite3": "^50.0.0"
+    "request-promise": "^4.2.2"
   },
   "scripts": {
     "debug": "node debug app.js",
