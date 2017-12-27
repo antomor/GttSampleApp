@@ -12,6 +12,10 @@ The application can be started with an initial set of data by changing the varia
 
 **The backend part use SQLite as database and the file is located under the `data` folder**
 
+## Docker
+1. `docker build -t gttsampleappbackend .`
+1. `docker run -p 8000:1337 gttsampleappbackend`
+
 ## Notes
 In order to let the services be callable by frontend app, cors has been enabled with any restriction on the origins.
 
